@@ -15,7 +15,7 @@
 </template>
 <script lang="ts" setup>
 import { ColorProp, SizeProp } from "../../types.ts";
-import mapper, { inputColor, inputSize } from "../../utils/mapper.ts";
+import mapper, { inputColor, inputSize } from "../../themes/mapper.ts";
 
 defineEmits<{
   (event: "update:modelValue", value: string): void;

@@ -16,7 +16,7 @@
 
 <script lang="ts" setup>
 import { ColorProp, SizeProp } from "../../types.ts";
-import mapper, { buttonColor, buttonSize } from "../../utils/mapper.ts";
+import mapper, { buttonColor, buttonSize } from "../../themes/mapper.ts";
 
 withDefaults(
   defineProps<{
