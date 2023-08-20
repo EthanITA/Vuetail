@@ -4,7 +4,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import VButton from "./components/v-button.vue";
+import VButton from "./components/atoms/v-button.vue";
 </script>
 
 <style scoped></style>

@@ -15,8 +15,8 @@
 </template>
 
 <script lang="ts" setup>
-import { Color, Size } from "../types.ts";
-import { buttonColor, buttonSize } from "../utils/mapper.ts";
+import { Color, Size } from "../../types.ts";
+import { buttonColor, buttonSize } from "../../utils/mapper.ts";
 import { computed } from "vue";
 
 const props = withDefaults(
