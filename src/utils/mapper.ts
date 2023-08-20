@@ -12,7 +12,7 @@ export const buttonColor: ColorMap = {
 };
 
 export const inputColor: ColorMap = {
-  default: "border-gray-600 focus:border-default-hover",
+  default: "border-gray-500 focus:border-gray-700",
   danger: "border-danger focus:border-danger-hover",
   warning: "border-warning focus:border-warning-hover",
   success: "border-success focus:border-success-hover",
