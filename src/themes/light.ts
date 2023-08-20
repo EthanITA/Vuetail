@@ -5,6 +5,7 @@ export const lightColors: Record<Color, string> = {
   danger: "#E73D23",
   warning: "#F9DC5C",
   success: "#2EB800",
+  info: "#0066ff",
 } as const;
 
 export const lightHoverColors: Record<HoverColor, string> = {
@@ -12,4 +13,5 @@ export const lightHoverColors: Record<HoverColor, string> = {
   "danger-hover": "#CA2E16",
   "success-hover": "#248F00",
   "warning-hover": "#F8D53A",
+  "info-hover": "#005AE0",
 } as const;
