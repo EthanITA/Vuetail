@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-info, .bg-success, .bg-danger {
+.bg-info, .bg-default, .bg-success, .bg-danger {
     @apply text-gray-50;
 }
 
