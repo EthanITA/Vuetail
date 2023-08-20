@@ -42,6 +42,41 @@ export const Input: Mapper = {
   },
 };
 
+export const Checkbox: Omit<Mapper, "Color"> & {
+  CheckSize: SizeMap;
+  ActiveColor: ColorMap;
+  NotActiveColor: ColorMap;
+} = {
+  Size: {
+    xs: "w-3.5 h-3.5 border-[1px] rounded focus:ring-[0.5px]",
+    sm: "w-4 h-4 border-[1px] rounded focus:ring-[0.5px]",
+    md: "w-5 h-5 border-[1.5px] rounded-md focus:ring-1 ring-offset-[1px]",
+    lg: "w-8 h-8 border-2 rounded-lg focus:ring-1",
+    xl: "w-10 h-10 border-2 rounded-xl focus:ring-1",
+  },
+  CheckSize: {
+    xs: "w-3.5 h-3.5",
+    sm: "w-4 h-4",
+    md: "w-5 h-5",
+    lg: "w-8 h-8",
+    xl: "w-10 h-10",
+  },
+  ActiveColor: {
+    default: "border-default bg-default ring-default",
+    danger: "border-danger bg-danger ring-danger",
+    info: "border-info bg-info ring-info",
+    success: "border-success bg-success ring-success",
+    warning: "border-warning bg-warning ring-warning",
+  },
+  NotActiveColor: {
+    default: "border-gray-500 bg-gray-50 focus:ring-0",
+    danger: "border-danger bg-gray-50 focus:ring-0",
+    info: "border-info bg-gray-50 focus:ring-0",
+    warning: "border-warning bg-gray-50 focus:ring-0",
+    success: "border-success bg-gray-50 focus:ring-0",
+  },
+};
+
 export default {
   getColor: (map: ColorMap, color?: ColorProp) => {
     if (color === "none") return "";
