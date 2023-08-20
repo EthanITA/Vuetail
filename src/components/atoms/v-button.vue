@@ -38,5 +38,3 @@ const color = computed(
 
 const size = computed(() => buttonSize[props.size] || buttonSize["md"]);
 </script>
-
-<style scoped></style>
