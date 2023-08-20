@@ -12,11 +12,11 @@ export const buttonColor: ColorMap = {
 };
 
 export const buttonSize: SizeMap = {
-  xs: "text-xs px-1 py-0.5",
-  sm: "text-sm px-2 py-1",
-  md: "px-3 py-1.5",
-  lg: "text-lg px-4 py-2",
-  xl: "text-xl px-5 py-2.5",
+  xs: "text-xs px-1 py-0.5 rounded",
+  sm: "text-sm px-2 py-1 rounded-sm",
+  md: "px-3 py-1.5 rounded-md",
+  lg: "text-lg px-4 py-2 rounded-lg",
+  xl: "text-xl px-5 py-2.5 rounded-xl",
 };
 
 export const inputColor: ColorMap = {
@@ -39,11 +39,11 @@ export default {
   getColor: (map: ColorMap, color?: ColorProp) => {
     if (color === "none") return "";
     if (!color) return map.default;
-    return map[color];
+    return map[color] || map.default;
   },
   getSize: (map: SizeMap, size?: SizeProp) => {
     if (size === "none") return "";
     if (!size) return map.md;
-    return map[size];
+    return map[size] || map.md;
   },
 };
