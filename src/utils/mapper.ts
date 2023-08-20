@@ -28,11 +28,11 @@ export const buttonSize: SizeMap = {
 };
 
 export const inputSize: SizeMap = {
-  xs: "text-xs px-1 py-[1px] border-[1px] rounded !focus:rounded",
-  sm: "text-sm px-2 py-[3px] border-[1px] rounded-md focus:rounded-md",
-  md: "px-3 py-1 border-2 rounded-md focus:rounded-md",
-  lg: "text-lg px-4 py-1.5 border-2 rounded-lg focus:rounded-lg",
-  xl: "text-xl px-5 py-2 border-2 rounded-xl focus:rounded-xl",
+  xs: "text-xs px-1 py-[1px] border-[1px] rounded-sm",
+  sm: "text-sm px-2 py-[3px] border-[1px] rounded",
+  md: "px-3 py-1 border-2 rounded-md",
+  lg: "text-lg px-4 py-1.5 border-2 rounded-lg",
+  xl: "text-xl px-5 py-2 border-2 rounded-xl",
 };
 
 export default {
