@@ -2,13 +2,13 @@
   <button
     :class="[
       {
-        [mapper.getColor(buttonColor, color)]: !disabled,
+        [mapper.getColor(Button.Color, color)]: !disabled,
         'text-gray-500 bg-gray-200 cursor-not-allowed': disabled,
       },
-      mapper.getSize(buttonSize, size),
+      mapper.getSize(Button.Size, size),
     ]"
     :disabled="disabled"
-    class="font-semibold"
+    class="font-semibold shadow-sm"
   >
     <slot />
   </button>
@@ -16,7 +16,7 @@
 
 <script lang="ts" setup>
 import { ColorProp, SizeProp } from "../../types.ts";
-import mapper, { buttonColor, buttonSize } from "../../themes/mapper.ts";
+import mapper, { Button } from "../../themes/mapper.ts";
 
 withDefaults(
   defineProps<{
