@@ -2,28 +2,27 @@
   <button
     :class="[
       {
-        [color]: !disabled,
+        [mapper.getColor(buttonColor, color)]: !disabled,
         'text-gray-500 bg-gray-200 cursor-not-allowed': disabled,
       },
-      size,
+      mapper.getSize(buttonSize, size),
     ]"
     :disabled="disabled"
-    class="rounded-md font-semibold shadow-md"
+    class="font-semibold"
   >
     <slot />
   </button>
 </template>
 
 <script lang="ts" setup>
-import { Color, Size } from "../../types.ts";
-import { buttonColor, buttonSize } from "../../utils/mapper.ts";
-import { computed } from "vue";
+import { ColorProp, SizeProp } from "../../types.ts";
+import mapper, { buttonColor, buttonSize } from "../../utils/mapper.ts";
 
-const props = withDefaults(
+withDefaults(
   defineProps<{
     disabled?: boolean;
-    size?: Size;
-    color?: Color;
+    size?: SizeProp;
+    color?: ColorProp;
   }>(),
   {
     disabled: false,
@@ -31,10 +30,4 @@ const props = withDefaults(
     color: "default",
   },
 );
-
-const color = computed(
-  () => buttonColor[props.color] || buttonColor["default"],
-);
-
-const size = computed(() => buttonSize[props.size] || buttonSize["md"]);
 </script>
