@@ -1,7 +1,7 @@
 <template>
   <input
     :value="modelValue"
-    @input="$emit('update:modelValue', ($event as InputEvent).target.value)"
+    @input="$emit('update:modelValue', ($event as InputEvent).target?.value)"
     :class="[
       {
         [mapper.getColor(inputColor, color)]: !disabled,
@@ -10,7 +10,7 @@
       mapper.getSize(inputSize, size),
     ]"
     :disabled="disabled"
-    class="focus:outline-none"
+    class="focus:outline-none bg-gray-100"
   />
 </template>
 <script lang="ts" setup>

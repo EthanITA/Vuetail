@@ -4,35 +4,35 @@ type ColorMap = Record<Color, string>;
 type SizeMap = Record<Size, string>;
 
 export const buttonColor: ColorMap = {
-  default: "bg-default hover:bg-default-hover",
-  danger: "bg-danger hover:bg-danger-hover",
-  warning: "bg-warning hover:bg-warning-hover",
-  success: "bg-success hover:bg-success-hover",
-  info: "bg-info hover:bg-info-hover",
+  default: "bg-default hover:bg-default-hover ring-default-hover",
+  danger: "bg-danger hover:bg-danger-hover ring-danger-hover",
+  warning: "bg-warning hover:bg-warning-hover ring-warning-hover",
+  success: "bg-success hover:bg-success-hover ring-success-hover",
+  info: "bg-info hover:bg-info-hover ring-info-hover",
 };
 
 export const inputColor: ColorMap = {
-  default: "border-gray-500 focus:border-gray-700",
-  danger: "border-danger focus:border-danger-hover",
-  warning: "border-warning focus:border-warning-hover",
-  success: "border-success focus:border-success-hover",
-  info: "border-info focus:border-info-hover",
+  default: "border-gray-500 ring-gray-500",
+  danger: "border-danger ring-danger",
+  warning: "border-warning ring-warning",
+  success: "border-success ring-success",
+  info: "border-info ring-info",
 };
 
 export const buttonSize: SizeMap = {
-  xs: "text-xs px-1 py-0.5 rounded-sm",
-  sm: "text-sm px-2 py-1 rounded",
-  md: "px-3 py-1.5 rounded-md",
-  lg: "text-lg px-4 py-2 rounded-lg",
-  xl: "text-xl px-5 py-2.5 rounded-xl",
+  xs: "text-xs px-1 py-0.5 rounded focus:ring-1 ring-offset-[0.5px]",
+  sm: "text-sm px-2 py-1 rounded-md focus:ring-1 ring-offset-[0.5px]",
+  md: "px-3 py-1.5 rounded-lg focus:ring-[1.5px] ring-offset-[1px]",
+  lg: "text-lg px-4 py-2 rounded-xl focus:ring-2 ring-offset-2",
+  xl: "text-xl px-5 py-2.5 rounded-2xl focus:ring-2 ring-offset-2",
 };
 
 export const inputSize: SizeMap = {
-  xs: "text-xs px-1 py-[1px] border-[1px] rounded-sm",
-  sm: "text-sm px-2 py-[3px] border-[1px] rounded",
-  md: "px-3 py-1 border-2 rounded-md",
-  lg: "text-lg px-4 py-1.5 border-2 rounded-lg",
-  xl: "text-xl px-5 py-2 border-2 rounded-xl",
+  xs: "text-xs px-1 py-[1px] border-[1px] rounded focus:ring-[0.5px]",
+  sm: "text-sm px-2 py-[3px] border-[1px] rounded-md focus:ring-[0.5px]",
+  md: "px-3 py-[5px] border-[1.5px] rounded-lg focus:ring-1",
+  lg: "text-lg px-4 py-[7px] border-2 rounded-xl focus:ring-1",
+  xl: "text-xl px-5 py-[8px] border-2 rounded-2xl focus:ring-1",
 };
 
 export default {
