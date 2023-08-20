@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .bg-info, .bg-default, .bg-success, .bg-danger {
-    @apply text-gray-50;
+    @apply text-gray-100;
 }
 
 .bg-warning {
