@@ -20,8 +20,8 @@ export const inputColor: ColorMap = {
 };
 
 export const buttonSize: SizeMap = {
-  xs: "text-xs px-1 py-0.5 rounded",
-  sm: "text-sm px-2 py-1 rounded-sm",
+  xs: "text-xs px-1 py-0.5 rounded-sm",
+  sm: "text-sm px-2 py-1 rounded",
   md: "px-3 py-1.5 rounded-md",
   lg: "text-lg px-4 py-2 rounded-lg",
   xl: "text-xl px-5 py-2.5 rounded-xl",
