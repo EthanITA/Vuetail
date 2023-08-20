@@ -1,10 +1,10 @@
 <template>
   <div class="flex h-[100vh]">
-    <v-btn class="m-auto" size="xl" color="default"> Click me!</v-btn>
+    <v-button class="m-auto" size="xl" color="default"> Click me!</v-button>
   </div>
 </template>
 <script lang="ts" setup>
-import VBtn from "./components/v-btn.vue";
+import VButton from "./components/v-button.vue";
 </script>
 
 <style scoped></style>
