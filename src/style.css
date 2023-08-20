@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-info, .bg-success, .bg-danger {
+    @apply text-gray-50;
+}
+
+.bg-warning {
+    @apply text-gray-700;
+}
