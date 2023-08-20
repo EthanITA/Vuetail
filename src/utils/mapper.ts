@@ -11,20 +11,20 @@ export const buttonColor: ColorMap = {
   info: "bg-info hover:bg-info-hover",
 };
 
-export const buttonSize: SizeMap = {
-  xs: "text-xs px-1 py-0.5 rounded",
-  sm: "text-sm px-2 py-1 rounded-sm",
-  md: "px-3 py-1.5 rounded-md",
-  lg: "text-lg px-4 py-2 rounded-lg",
-  xl: "text-xl px-5 py-2.5 rounded-xl",
-};
-
 export const inputColor: ColorMap = {
   default: "border-gray-600 focus:border-default-hover",
   danger: "border-danger focus:border-danger-hover",
   warning: "border-warning focus:border-warning-hover",
   success: "border-success focus:border-success-hover",
   info: "border-info focus:border-info-hover",
+};
+
+export const buttonSize: SizeMap = {
+  xs: "text-xs px-1 py-0.5 rounded",
+  sm: "text-sm px-2 py-1 rounded-sm",
+  md: "px-3 py-1.5 rounded-md",
+  lg: "text-lg px-4 py-2 rounded-lg",
+  xl: "text-xl px-5 py-2.5 rounded-xl",
 };
 
 export const inputSize: SizeMap = {
