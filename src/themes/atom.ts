@@ -3,12 +3,12 @@ import { Color, ColorProp, Size, SizeProp } from "../types.ts";
 type ColorMap = Record<Color, string>;
 type SizeMap = Record<Size, string>;
 
-interface Mapper {
+interface Atom {
   Color: ColorMap;
   Size: SizeMap;
 }
 
-export const Button: Mapper = {
+export const Button: Atom = {
   Color: {
     default: "bg-default hover:bg-default-hover ring-default-hover",
     danger: "bg-danger hover:bg-danger-hover ring-danger-hover",
@@ -25,7 +25,7 @@ export const Button: Mapper = {
   },
 };
 
-export const Input: Mapper = {
+export const Input: Atom = {
   Color: {
     default: "border-gray-500 ring-gray-500",
     danger: "border-danger ring-danger",
@@ -42,17 +42,20 @@ export const Input: Mapper = {
   },
 };
 
-export const Checkbox: Omit<Mapper, "Color"> & {
+export const Checkbox: Omit<Atom, "Color"> & {
   CheckSize: SizeMap;
+  LabelSize: SizeMap;
   ActiveColor: ColorMap;
   NotActiveColor: ColorMap;
+  ActiveHoverColor: ColorMap;
+  NotActiveHoverColor: ColorMap;
 } = {
   Size: {
-    xs: "w-3.5 h-3.5 border-[1px] rounded focus:ring-[0.5px]",
-    sm: "w-4 h-4 border-[1px] rounded focus:ring-[0.5px]",
-    md: "w-5 h-5 border-[1.5px] rounded-md focus:ring-1 ring-offset-[1px]",
-    lg: "w-8 h-8 border-2 rounded-lg focus:ring-1",
-    xl: "w-10 h-10 border-2 rounded-xl focus:ring-1",
+    xs: "w-3.5 h-3.5 border-[1px] rounded focus:ring-[0.5px] ring-offset-[0.5px]",
+    sm: "w-4 h-4 border-[1px] rounded focus:ring-[0.5px] ring-offset-[0.5px]",
+    md: "w-5 h-5 border-[1.5px] rounded-md focus:ring-1 ring-offset-1",
+    lg: "w-8 h-8 border-2 rounded-lg focus:ring-1 ring-offset-2",
+    xl: "w-10 h-10 border-2 rounded-xl focus:ring-1 ring-offset-2",
   },
   CheckSize: {
     xs: "w-3.5 h-3.5",
@@ -61,19 +64,40 @@ export const Checkbox: Omit<Mapper, "Color"> & {
     lg: "w-8 h-8",
     xl: "w-10 h-10",
   },
+  LabelSize: {
+    xs: "text-xs gap-0.5",
+    sm: "text-sm gap-1",
+    md: "text-base gap-2",
+    lg: "text-xl gap-3",
+    xl: "text-2xl gap-4",
+  },
   ActiveColor: {
-    default: "border-default bg-default ring-default",
-    danger: "border-danger bg-danger ring-danger",
-    info: "border-info bg-info ring-info",
-    success: "border-success bg-success ring-success",
-    warning: "border-warning bg-warning ring-warning",
+    default: "border-default bg-default ring-default hover:bg-default-hover",
+    danger: "border-danger bg-danger ring-danger hover:bg-danger-hover",
+    info: "border-info bg-info ring-info hover:bg-info-hover",
+    success: "border-success bg-success ring-success hover:bg-success-hover",
+    warning: "border-warning bg-warning ring-warning hover:bg-warning-hover",
   },
   NotActiveColor: {
-    default: "border-gray-500 bg-gray-50 focus:ring-0",
-    danger: "border-danger bg-gray-50 focus:ring-0",
-    info: "border-info bg-gray-50 focus:ring-0",
-    warning: "border-warning bg-gray-50 focus:ring-0",
-    success: "border-success bg-gray-50 focus:ring-0",
+    default: "border-gray-500 bg-gray-50",
+    danger: "border-danger bg-gray-50",
+    info: "border-info bg-gray-50",
+    warning: "border-warning bg-gray-50",
+    success: "border-success bg-gray-50",
+  },
+  ActiveHoverColor: {
+    default: "border-gray-600 bg-gray-200",
+    danger: "border-danger-hover bg-danger-hover",
+    info: "border-info-hover bg-info-hover",
+    success: "border-success-hover bg-success-hover",
+    warning: "border-warning-hover bg-warning-hover",
+  },
+  NotActiveHoverColor: {
+    default: "border-gray-600 !bg-gray-200",
+    danger: "border-danger-hover !bg-gray-200",
+    info: "border-info-hover !bg-gray-200",
+    success: "border-success-hover !bg-gray-200",
+    warning: "border-warning-hover !bg-gray-200",
   },
 };
 

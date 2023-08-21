@@ -5,7 +5,10 @@
       :disabled="disabled"
       :size="size"
       :color="color"
-    />
+      label="Label"
+      label-left
+    >
+    </v-checkbox>
     <v-input :disabled="disabled" :size="size" :color="color" v-model="a" />
     <v-button :disabled="disabled" :size="size" :color="color">
       Click me!
@@ -23,7 +26,7 @@ const a = ref("hello");
 const check = ref(false);
 const disabled = ref<boolean>(false);
 const size = ref<SizeProp>("md");
-const color = ref<ColorProp>("default");
+const color = ref<ColorProp>("info");
 </script>
 
 <style scoped></style>

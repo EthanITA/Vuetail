@@ -4,10 +4,10 @@
     @input="$emit('update:modelValue', ($event as InputEvent).target?.value)"
     :class="[
       {
-        [mapper.getColor(Input.Color, color)]: !disabled,
+        [atom.getColor(Input.Color, color)]: !disabled,
         'text-gray-500 bg-gray-200 cursor-not-allowed !select-none': disabled,
       },
-      mapper.getSize(Input.Size, size),
+      atom.getSize(Input.Size, size),
     ]"
     :disabled="disabled"
     class="focus:outline-none bg-gray-100"
@@ -15,7 +15,7 @@
 </template>
 <script lang="ts" setup>
 import { ColorProp, SizeProp } from "../../types.ts";
-import mapper, { Input } from "../../themes/mapper.ts";
+import atom, { Input } from "../../themes/atom.ts";
 
 defineEmits<{
   (event: "update:modelValue", value: string): void;

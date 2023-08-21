@@ -2,10 +2,10 @@
   <button
     :class="[
       {
-        [mapper.getColor(Button.Color, color)]: !disabled,
+        [atom.getColor(Button.Color, color)]: !disabled,
         'text-gray-500 bg-gray-200 cursor-not-allowed': disabled,
       },
-      mapper.getSize(Button.Size, size),
+      atom.getSize(Button.Size, size),
     ]"
     :disabled="disabled"
     class="font-semibold shadow-sm"
@@ -16,7 +16,7 @@
 
 <script lang="ts" setup>
 import { ColorProp, SizeProp } from "../../types.ts";
-import mapper, { Button } from "../../themes/mapper.ts";
+import atom, { Button } from "../../themes/atom.ts";
 
 withDefaults(
   defineProps<{
