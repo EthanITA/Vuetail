@@ -10,7 +10,7 @@
       atom.getSize(Input.Size, size),
     ]"
     :disabled="disabled"
-    class="focus:outline-none bg-gray-100"
+    class="focus:outline-none bg-gray-50 focus:shadow-sm"
   />
 </template>
 <script lang="ts" setup>
