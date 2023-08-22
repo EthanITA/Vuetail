@@ -5,7 +5,7 @@
     :class="[
       {
         [atom.getColor(Input.Color, color)]: !disabled,
-        'text-gray-500 bg-gray-200 cursor-not-allowed !select-none': disabled,
+        'text-gray-300 bg-gray-200 cursor-not-allowed !select-none': disabled,
       },
       atom.getSize(Input.Size, size),
     ]"
