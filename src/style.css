@@ -9,3 +9,15 @@
 .bg-warning {
     @apply text-gray-700;
 }
+
+.clickable {
+    @apply cursor-pointer shadow-sm hover:shadow-xl
+}
+
+.clickable[data-hover=true] {
+    @apply shadow-xl;
+}
+
+.clickable[disabled] {
+    @apply cursor-not-allowed shadow-none;
+}

@@ -8,7 +8,7 @@
       atom.getSize(Button.Size, size),
     ]"
     :disabled="disabled"
-    class="font-semibold shadow-sm"
+    class="font-semibold clickable"
   >
     <slot />
   </button>

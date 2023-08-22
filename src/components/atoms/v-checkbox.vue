@@ -3,7 +3,7 @@
     :class="[
       [atom.getSize(Checkbox.LabelSize, size)],
       {
-        'text-gray-400 cursor-not-allowed': disabled,
+        'text-gray-300 cursor-not-allowed': disabled,
         'cursor-pointer': !disabled,
       },
     ]"
@@ -28,10 +28,11 @@
     </template>
     <div
       ref="checkbox"
+      :data-hover="hovered"
       :class="[
         atom.getSize(Checkbox.Size, size),
         disabled
-          ? 'bg-gray-200 ring-0 text-gray-400 border-gray-400'
+          ? 'bg-gray-50 ring-0 text-gray-400 border-gray-200'
           : {
               [atom.getColor(Checkbox.ActiveColor, color)]: modelValue,
               [atom.getColor(Checkbox.NotActiveColor, color)]: !modelValue,
@@ -42,7 +43,7 @@
             },
       ]"
       :tabindex="!disabled ? -1 : undefined"
-      class="relative"
+      class="relative clickable"
     >
       <CheckIcon
         v-show="modelValue"
