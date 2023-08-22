@@ -3,7 +3,7 @@
     :class="[
       {
         [atom.getColor(Button.Color, color)]: !disabled,
-        'text-gray-500 bg-gray-200 cursor-not-allowed': disabled,
+        'text-gray-400 bg-gray-200 cursor-not-allowed': disabled,
       },
       atom.getSize(Button.Size, size),
     ]"
