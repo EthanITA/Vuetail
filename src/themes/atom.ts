@@ -54,8 +54,8 @@ export const Checkbox: Omit<Atom, "Color"> & {
     xs: "w-3.5 h-3.5 border-[1px] rounded focus:ring-[0.5px] ring-offset-[0.5px]",
     sm: "w-4 h-4 border-[1px] rounded focus:ring-[0.5px] ring-offset-[0.5px]",
     md: "w-5 h-5 border-[1.5px] rounded-md focus:ring-1 ring-offset-1",
-    lg: "w-8 h-8 border-2 rounded-lg focus:ring-1 ring-offset-2",
-    xl: "w-10 h-10 border-2 rounded-xl focus:ring-1 ring-offset-2",
+    lg: "w-8 h-8 border-2 rounded-lg focus:ring-2 ring-offset-2",
+    xl: "w-10 h-10 border-2 rounded-xl focus:ring-2 ring-offset-2",
   },
   CheckSize: {
     xs: "w-3.5 h-3.5",
